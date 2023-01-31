@@ -52,14 +52,14 @@ namespace Andasuk.Repositories
                 CarProductId = o.CarProductId,
                 CarId = o.CarId,
                 ProductId = o.ProductId,
-                CarName = o.Car.Model,
+                CarName = o.Car.Mark,
                 ProductName = o.Product.Name
             }).ToList();
         }
 
         public IEnumerable<CarProductViewModel> GetAllByValue(string value)
         {
-            var result = db.CarProducts.Include(o => o.Car).Include(o => o.Product).Where(o => o.Car.Model.Contains(value) ||
+            var result = db.CarProducts.Include(o => o.Car).Include(o => o.Product).Where(o => o.Car.Mark.Contains(value) ||
                                                                                                o.Product.Name.Contains(value));
 
             return result.Select(o => new CarProductViewModel
@@ -67,7 +67,7 @@ namespace Andasuk.Repositories
                 CarProductId = o.CarProductId,
                 CarId = o.CarId,
                 ProductId= o.ProductId,
-                CarName = o.Car.Model,
+                CarName = o.Car.Mark,
                 ProductName = o.Product.Name,
             }).ToList();
         }
@@ -81,7 +81,7 @@ namespace Andasuk.Repositories
             model.CarProductId = result.CarProductId;
             model.CarId = result.CarId;
             model.ProductId = result.ProductId;
-            model.CarName = result.Car.Model;
+            model.CarName = result.Car.Mark;
             model.ProductName = result.Product.Name;
 
             return model;
