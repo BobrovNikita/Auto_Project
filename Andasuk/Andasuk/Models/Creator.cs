@@ -12,17 +12,17 @@ namespace Andasuk.Models
     {
         public Guid CreatorId { get; set; }
 
-        [Required(ErrorMessage = "Name is required field")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Name must be between 3 and 50")]
+        [Required(ErrorMessage = "Название является обязательным полем")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Название должно быть от 3-х до 50-и символов")]
         public string Name { get; set; }
 
 
-        [Required(ErrorMessage = "Country code is required field")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Country code must be between 3 and 50")]
+        [Required(ErrorMessage = "Страна является обязательным полем")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Страна должна быть от 3-х до 50-и символов")]
         public string Country { get; set; }
 
-        [Required(ErrorMessage = "UNP is required field")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "UNP code must be between 3 and 50")]
+        [Required(ErrorMessage = "УНП является обязательным полем")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "УНП должно быть от 3-х до 50-и символов")]
         public string UNP { get; set; }
 
         public IEnumerable<Product> Products { get; set; }

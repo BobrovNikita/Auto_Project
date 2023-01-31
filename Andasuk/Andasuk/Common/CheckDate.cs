@@ -19,7 +19,9 @@ namespace Andasuk.Common
             {
                 var dt = (DateTime)value;
 
-                if (dt >= DateTime.Now && dt.Year <= DateTime.Now.Year + 10)
+                if (
+                    (dt.Year >= 2000 && dt.Year <= 2050)
+                   )
                 {
                     return true;
                 }

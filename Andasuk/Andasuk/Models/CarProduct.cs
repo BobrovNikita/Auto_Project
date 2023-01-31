@@ -11,10 +11,10 @@ namespace Andasuk.Models
     {
         public Guid CarProductId { get; set; }
 
-        [Required(ErrorMessage = "Product ID is required field")]
+        [Required(ErrorMessage = "Продукт является обязательным полем")]
         public Guid ProductId { get; set; }
 
-        [Required(ErrorMessage = "Car ID is required field")]
+        [Required(ErrorMessage = "Автомобиль является обязательным полем")]
         public Guid CarId { get; set; }
 
         public Car Car { get; set; }

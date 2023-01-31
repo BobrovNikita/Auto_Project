@@ -11,8 +11,8 @@ namespace Andasuk.Models
     {
         public Guid CatalogId { get; set; }
 
-        [Required(ErrorMessage = "Name is required field")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Name must be between 3 and 50")]
+        [Required(ErrorMessage = "Название является обязательным полем")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Название должно быть от 3-х до 50-и символов")]
         public string Name { get; set; }
 
         public IEnumerable<Spare> Spares { get; set; }

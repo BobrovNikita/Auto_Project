@@ -13,29 +13,29 @@ namespace Andasuk.Models
     {
         public Guid CarId { get; set; }
 
-        [Required(ErrorMessage = "Mark is required field")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Mark must be between 3 and 50")]
+        [Required(ErrorMessage = "Марка обязательное поле")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Марка должна быть от 3-х до 50-и символов")]
         public string Mark { get; set; }
 
 
-        [Required(ErrorMessage = "Model code is required field")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Model code must be between 3 and 50")]
+        [Required(ErrorMessage = "Модель обязательное поле")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Модель должна быть от 3-х до 50-и символов")]
         public string Model { get; set; }
 
-        [Required(ErrorMessage = "Date Production is required field")]
-        [CheckDate(ErrorMessage = "Date Production must be today or no more than 10 years")]
+        [Required(ErrorMessage = "Дата производства обязательное поле")]
+        [CheckDate(ErrorMessage = "Дата производства должна быть в диапазоне от 01.01.2000 до 01.01.2050")]
         public DateTime DateProduction { get; set; }
 
-        [Required(ErrorMessage = "DatePO is required field")]
-        [CheckDate(ErrorMessage = "DatePO must be today or no more than 10 years")]
+        [Required(ErrorMessage = "Дата ПО обязательное поле")]
+        [CheckDate(ErrorMessage = "Дата ПО должна быть в диапазоне от 01.01.2000 до 01.01.2050")]
         public DateTime DatePO { get; set; }
 
-        [Required(ErrorMessage = "Capacity is required field")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Capacity code must be between 3 and 50")]
+        [Required(ErrorMessage = "Объем двигателя обязательное поле")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Объем двигателя должен быть от 3-х до 50-и символов")]
         public string Capacity { get; set; }
 
-        [Required(ErrorMessage = "Power is required field")]
-        [Range(1, 1000, ErrorMessage = "Power must be between 1 and 1000")]
+        [Required(ErrorMessage = "Мощность двигателя обязательное поле")]
+        [Range(1, 1000, ErrorMessage = "Мощность двигателя должна быть в диапазоне от 1 до 1000")]
         public int Power { get; set; }
 
         public IEnumerable<CarProduct> CarProducts { get; set; }
